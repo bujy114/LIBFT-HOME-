@@ -18,23 +18,23 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	s2len;
 	size_t	n;
 	char	*ptr;
-	
+
 	s1len = ft_strlen(s1);
 	s2len = ft_strlen(s2);
 	ptr = malloc(s1len + s2len + 1);
-    if (ptr == NULL)
-        return (NULL);
-    n = 0;
-    while (n < s1len)
-    {
-        ptr[n] = s1[n];
-        n++;
-    }
-    while (n < s2len + s1len)
-    {
-        ptr[n] = s2[n - s1len];
-        n++;
-    }
-    ptr[n] = '\0';
-    return (ptr);
+	if (ptr == NULL)
+		return (NULL);
+	n = 0;
+	while (n < s1len)
+	{
+		ptr[n] = s1[n];
+		n++;
+	}
+	while (n < s2len + s1len)
+	{
+		ptr[n] = s2[n - s1len];
+		n++;
+	}
+	ptr[n] = '\0';
+	return (ptr);
 }

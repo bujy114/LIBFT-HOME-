@@ -1,35 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsallam <lsallam@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/20 16:22:44 by lsallam           #+#    #+#             */
-/*   Updated: 2026/09/20 16:22:57 by lsallam          ###   ########.fr       */
+/*   Created: 2026/09/22 14:02:14 by lsallam           #+#    #+#             */
+/*   Updated: 2026/09/22 17:24:44 by lsallam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+static size_t	words_count(char const *s, char c)
 {
-	size_t	i;
-	size_t	num;
-	char	*ptr;
+	char const	*ptr;
+	size_t		num;
+	size_t		i;
 
-	if (!s || !f)
-		return (NULL);
 	i = 0;
-	num = ft_strlen(s);
-	ptr = malloc(num + 1);
-	if (ptr == NULL)
-		return (NULL);
-	while (i < num)
+	num = 0;
+	ptr = s;
+	if (ptr[0] !=c)
+		num++;
+	while (ptr[i] != '\0')
 	{
-		ptr[i] = f(i, s[i]);
+		if (ptr[i] == c && ptr[i + 1] != c)
+			num++;
 		i++;
 	}
-	ptr[i] = '\0';
-	return (ptr);
+	return (num);
+}
+
+static char	**maketheptr(char const *s, char c)
+{
+
+}
+char **ft_split(char const *s, char c)
+{
+	char	**ptr;
+
+	ptr = malloc(words_count(s, c));
 }

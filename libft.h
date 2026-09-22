@@ -6,15 +6,15 @@
 /*   By: lsallam <lsallam@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/09 09:52:51 by lsallam           #+#    #+#             */
-/*   Updated: 2026/09/20 16:25:44 by lsallam          ###   ########.fr       */
+/*   Updated: 2026/09/21 09:27:53 by lsallam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#ifndef LIBFT
-#define LIBFT
+#ifndef LIBFT_H
+# define LIBFT_H
 
-#include <stddef.h>
-#include <unistd.h>
-#include <stdlib.h>
+# include <stddef.h>
+# include <stdlib.h>
+# include <unistd.h>
 
 size_t	ft_strlen(const char *c);
 size_t	ft_strlcpy(char *dest, const char *src, size_t size);
@@ -47,12 +47,5 @@ int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
-
-
-
-
-
-
-
 
 #endif

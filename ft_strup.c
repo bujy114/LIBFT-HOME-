@@ -14,14 +14,14 @@
 
 char	*ft_strdup(const char *s)
 {
-    size_t	n;
-    char	*ptr;
+	size_t	n;
+	char	*ptr;
 
-    n = ft_strlen(s);
-    ptr = malloc(n + 1);
-    if (ptr == NULL)
-        return (NULL);
-    ft_strcpy(ptr, s);
-    ptr[n] = '\0';
-    return (ptr);
+	n = ft_strlen(s);
+	ptr = malloc(n + 1);
+	if (ptr == NULL)
+		return (NULL);
+	ft_strcpy(ptr, s);
+	ptr[n] = '\0';
+	return (ptr);
 }

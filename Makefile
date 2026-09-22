@@ -6,7 +6,7 @@
 #    By: lsallam <lsallam@learner.42.tech>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/09/09 10:01:24 by lsallam           #+#    #+#              #
-#    Updated: 2026/09/20 16:26:08 by lsallam          ###   ########.fr        #
+#    Updated: 2026/09/22 13:56:47 by lsallam          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,3 +36,5 @@ fclean:
 	rm -f $(NAME) $(OBJ)
 
 re: fclean all
+
+.PHONY: all clean fclean re
