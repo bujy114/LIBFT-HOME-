@@ -1,21 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list.h                                          :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsallam <lsallam@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/21 09:56:00 by lsallam           #+#    #+#             */
-/*   Updated: 2026/09/22 11:36:59 by lsallam          ###   ########.fr       */
+/*   Created: 2026/09/23 17:26:30 by lsallam           #+#    #+#             */
+/*   Updated: 2026/09/23 17:26:37 by lsallam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_LIST_H
-#define FT_LIST_H
+#include "libft.h"
 
-typedef struct s_list
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	struct s_list	*next;
-	void			*content;
-}	t_list;
-#endif
+	size_t	i;
+
+	i = 0;
+	if (!s || !f)
+		return ;
+	while (i < ft_strlen(s))
+	{
+		f(i, &s[i]);
+		i++;
+	}
+}

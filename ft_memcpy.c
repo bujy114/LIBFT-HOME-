@@ -6,7 +6,7 @@
 /*   By: lsallam <lsallam@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/10 15:17:10 by lsallam           #+#    #+#             */
-/*   Updated: 2026/09/10 16:05:27 by lsallam          ###   ########.fr       */
+/*   Updated: 2026/09/24 16:01:25 by lsallam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned const char	*s;
-	char				*d;
+	unsigned char			*d;
 
 	s = src;
 	d = dest;
