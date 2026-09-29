@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "ft_list.h"
 
 unsigned int	ft_lstsize(t_list *lst)
 {
@@ -22,11 +21,10 @@ unsigned int	ft_lstsize(t_list *lst)
 		return (0);
 	ptr = lst;
 	num = 0;
-	while (ptr -> next != NULL)
+	while (ptr != NULL)
 	{
-		ptr = ptr -> next;
 		num++;
+		ptr = ptr -> next;
 	}
-	num++;
 	return (num);
 }
