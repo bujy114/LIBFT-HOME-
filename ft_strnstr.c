@@ -6,7 +6,7 @@
 /*   By: lsallam <lsallam@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/14 11:12:50 by lsallam           #+#    #+#             */
-/*   Updated: 2026/09/14 12:40:15 by lsallam          ###   ########.fr       */
+/*   Updated: 2026/09/29 15:00:40 by lsallam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ char	*ft_strnstr(const char *big, const char *small, size_t len)
 	counts = 0;
 	if (*small == '\0')
 		return ((char *) big);
-	while (countb < len)
+	while (countb < len && big[countb])
 	{
 		if (big[countb] == small[0])
 		{
-			while (counts < ft_strlen(small) && counts + countb < len)
+			while (counts < ft_strlen(small) && countb + counts < len)
 			{
 				if (big[countb + counts] != small[counts])
 					break ;

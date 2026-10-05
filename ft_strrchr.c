@@ -6,7 +6,7 @@
 /*   By: lsallam <lsallam@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/13 16:02:35 by lsallam           #+#    #+#             */
-/*   Updated: 2026/09/27 12:41:37 by lsallam          ###   ########.fr       */
+/*   Updated: 2026/09/29 14:42:43 by lsallam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	const char	*ptr;
-	char		*theone;
+	unsigned char	*ptr;
+	char			*theone;
 
 	theone = NULL;
-	ptr = s;
+	ptr = (unsigned char *)s;
 	while (*ptr != '\0')
 	{
-		if (*ptr == c)
+		if (*ptr == (unsigned char)c)
 			theone = (char *)ptr;
 		ptr++;
 	}

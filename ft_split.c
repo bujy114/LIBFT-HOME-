@@ -6,7 +6,7 @@
 /*   By: lsallam <lsallam@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 14:02:14 by lsallam           #+#    #+#             */
-/*   Updated: 2026/09/23 15:14:07 by lsallam          ###   ########.fr       */
+/*   Updated: 2026/09/29 13:49:50 by lsallam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,6 +96,8 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	num = 0;
+	if (!s)
+		return (NULL);
 	walkthro = s;
 	if (walkthro[0] != c && walkthro[0] != '\0')
 	{
